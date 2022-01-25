@@ -1,0 +1,639 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+/*-------------INDEX--------------*/
+
+.grilla {
+  display: grid;
+  height: 100vh;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "header header header header header header header header"
+    "Main Main Main Main Main Main Main Main"
+    "Main Main Main Main Main Main Main Main"
+    "Main Main Main Main Main Main Main Main"
+    "Main Main Main Main Main Main Main Main"
+    "Main Main Main Main Main Main Main Main"
+    "Main Main Main Main Main Main Main Main"
+    "Main Main Main Main Main Main Main Main"
+    "Main Main Main Main Main Main Main Main"
+    "miMusica miMusica miMusica miMusica miMusica miMusica miMusica miMusica"
+    "miMusica miMusica miMusica miMusica miMusica miMusica miMusica miMusica"
+    "miMusica miMusica miMusica miMusica miMusica miMusica miMusica miMusica"
+    "footer footer footer footer footer footer footer footer";
+}
+
+.header {
+  grid-area: header;
+  height: 10vh;
+  background-color: #292540;
+
+}
+
+.main {
+  grid-area: Main;
+  height: 100vh;
+
+}
+
+.miMusica {
+  grid-area: miMusica;
+  height: 30vh;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.footer {
+  grid-area: footer;
+  height: 10vh;
+  background-color: #292540;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*------header-----*/
+
+.barraSuperior {
+  height: 10vh;
+  font-family: 'Outfit', sans-serif;
+  font-size: 1vw;
+  font-weight: 400;
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  padding: 1em;
+
+}
+
+.logo img {
+  width: 8vw;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  padding-right: 1em;
+}
+
+.nav ul {
+  display: flex;
+  list-style: none;
+}
+
+.nav li {
+  padding: 1em;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #fff;
+}
+
+
+
+
+/*------Main------*/
+
+.contenedorMain {
+  height: 100vh;
+  background-image: url(../Archivos/homebg.jpg);
+  background-repeat: no-repeat;
+  background-size: 100vw;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.title h1 {
+  color: #fff;
+  font-family: 'Outfit', sans-serif;
+  font-size: 5vw;
+  font-weight: 700;
+  text-shadow: 0px 3px 5px #000;
+
+}
+
+.contacto {
+  display: flex;
+  justify-content: center;
+}
+
+.contacto h2 {
+  background-color: #734E6D;
+  display: inline-block;
+  margin-top: 1em;
+  padding: 1em;
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.5vw;
+  font-weight: 400;
+  border-radius: 60px;
+}
+
+.contacto a {
+  text-decoration: none;
+  color: #F1BE9F;
+}
+
+.social {
+  display: flex;
+}
+
+.social a {
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+}
+
+.social a img {
+  width: 3vw;
+}
+
+
+/*MEDIA QUERYS INDEX*/
+
+/*LAPTOP*/
+
+@media (max-width: 1024px) {
+
+  .main {
+    grid-area: Main;
+    height: 70vh;
+
+  }
+
+  .contenedorMain {
+    height: 70vh;
+    background-position: center;
+    background-size: cover;
+  }
+
+}
+
+/*TABLET*/
+
+@media (max-width: 768px) {
+
+  .main {
+    grid-area: Main;
+    height: 55vh;
+  }
+
+  .header{
+    height: 9vh;
+  }
+
+  .contenedorMain {
+    height: 55vh;
+  }
+  .barraSuperior {
+    height: 9vh;
+    font-size: 1.5vw;
+  }
+
+  .logo img{
+    width: 9vw;
+  }
+
+  .miMusica {
+    grid-area: miMusica;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  .social a img {
+    width: 5vw;
+  }
+
+
+}
+
+/*MOBILE BIG*/
+
+@media (max-width: 425px) {
+
+
+  .header{
+    height: 7vh;
+  }
+
+  .barraSuperior {
+    height: 7vh;
+    font-size: 1.5vw;
+  }
+
+  .main {
+    grid-area: Main;
+    height: 40vh;
+  }
+
+  .contenedorMain {
+    height: 40vh;
+    background-size: 120vw;
+    background-position: center;
+    background-size: cover;
+  }
+
+  .title h1 {
+    font-size: 8vw; 
+  }
+
+  .contacto h2 {
+    margin-top: 1em;
+    padding: 1em;
+    font-size: 3vw;
+    border-radius: 60px;
+  }
+
+  .miMusica {
+    grid-area: miMusica;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  .contenedorSC iframe {
+    width: 40vw;
+    height: 20vh;
+  }
+  
+  .nota {
+    font-size: 4vw;
+  }
+
+  .social a img {
+    width: 7vw;
+  }
+
+}
+
+/*MOBILE SMALL*/
+
+@media (max-width: 375px){
+
+  .main {
+    grid-area: Main;
+    height: 60vh;
+
+  }
+
+  .contenedorMain {
+    height: 60vh;
+    background-size: 200vw;
+    background-position: center;
+    background-size: cover;
+  }
+
+  .footer {
+    height: 25vh;
+  }
+
+  .social {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .social a {
+    padding-top: 1.5em;
+  }
+
+  .social a img {
+    width: 13vw;
+  }
+
+}
+
+
+/* <----------------------- SOBRE MI --------------------> */
+
+.grillaSobreMi {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "header header header header header header header header"
+    "sobreMi sobreMi sobreMi sobreMi sobreMi sobreMi sobreMi sobreMi"
+    "sobreMi sobreMi sobreMi sobreMi sobreMi sobreMi sobreMi sobreMi"
+    "sobreMi sobreMi sobreMi sobreMi sobreMi sobreMi sobreMi sobreMi"
+    "sobreMi sobreMi sobreMi sobreMi sobreMi sobreMi sobreMi sobreMi"
+    "sobreMi sobreMi sobreMi sobreMi sobreMi sobreMi sobreMi sobreMi"
+    "cajaParrafoSobreMi cajaParrafoSobreMi cajaParrafoSobreMi cajaParrafoSobreMi cajaParrafoSobreMi cajaParrafoSobreMi cajaParrafoSobreMi cajaParrafoSobreMi"
+    "cajaParrafoSobreMi cajaParrafoSobreMi cajaParrafoSobreMi cajaParrafoSobreMi cajaParrafoSobreMi cajaParrafoSobreMi cajaParrafoSobreMi cajaParrafoSobreMi"
+    "cajaParrafoSobreMi cajaParrafoSobreMi cajaParrafoSobreMi cajaParrafoSobreMi cajaParrafoSobreMi cajaParrafoSobreMi cajaParrafoSobreMi cajaParrafoSobreMi"
+    "cajaParrafoSobreMi cajaParrafoSobreMi cajaParrafoSobreMi cajaParrafoSobreMi cajaParrafoSobreMi cajaParrafoSobreMi cajaParrafoSobreMi cajaParrafoSobreMi"
+    "cajaParrafoSobreMi cajaParrafoSobreMi cajaParrafoSobreMi cajaParrafoSobreMi cajaParrafoSobreMi cajaParrafoSobreMi cajaParrafoSobreMi cajaParrafoSobreMi"
+    "cajaParrafoSobreMi cajaParrafoSobreMi cajaParrafoSobreMi cajaParrafoSobreMi cajaParrafoSobreMi cajaParrafoSobreMi cajaParrafoSobreMi cajaParrafoSobreMi"
+    "footer footer footer footer footer footer footer footer";
+}
+
+.header {
+  grid-area: header;
+}
+
+.footer {
+  grid-area: footer;
+}
+
+.sobreMi {
+  grid-area: sobreMi;
+  height: 50vh;
+  background-image: url(../Archivos/aboutmebg.jpg);
+  background-position: center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center
+}
+
+.h1SobreMi {
+  color: #fff;
+  font-family: 'Outfit', sans-serif;
+  font-size: 5vw;
+  font-weight: 700;
+  text-shadow: 0px 3px 5px #000;
+}
+
+.cajaParrafoSobreMi {
+  grid-area: cajaParrafoSobreMi;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 60vh;
+}
+
+.parrafoSobreMi {
+  color: #292540;
+  font-family: 'Outfit', sans-serif;
+  font-size: 1vw;
+  font-weight: 400;
+  padding-left: 8em;
+  padding-right: 8em;
+}
+
+/*MEDIA QUERYS SOBRE MI*/
+
+/*LAPTOP*/
+
+@media (max-width: 1024px) {
+
+  
+
+  .sobreMi {
+    height: 50vh;
+    background-position: center;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .cajaParrafoSobreMi {
+    height: 60vh;
+  }
+
+}
+
+/*TABLET*/
+
+@media (max-width: 768px) {
+
+  .header{
+    height: 10vh;
+  }
+
+  .barraSuperior {
+    height: 10vh;
+    font-size: 1.5vw;
+  }
+
+  .sobreMi {
+    height: 50vh;
+  }
+
+  .cajaParrafoSobreMi {
+    height: 60vh;
+  }
+
+  .parrafoSobreMi {
+    color: #292540;
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.6vw;
+    font-weight: 400;
+    padding-left: 8em;
+    padding-right: 8em;
+  }
+
+
+}
+
+/*MOBILE BIG*/
+
+@media (max-width: 425px) {
+
+  .sobreMi {
+    height: 50vh;
+  }
+
+  .cajaParrafoSobreMi {
+    height: 60vh;
+  }
+
+  .parrafoSobreMi {
+    color: #292540;
+    font-family: 'Outfit', sans-serif;
+    font-size: 2vw;
+    font-weight: 400;
+    padding-left: 8em;
+    padding-right: 8em;
+  }
+
+}
+
+/*MOBILE SMALL*/
+
+@media (max-width: 375px){
+
+  .sobreMi {
+    height: 60vh;
+
+  }
+
+  .cajaParrafoSobreMi {
+    height: 80vh;
+  }
+
+    .parrafoSobreMi {
+    color: #292540;
+    font-family: 'Outfit', sans-serif;
+    font-size: 2vw;
+    font-weight: 400;
+    padding-left: 8em;
+    padding-right: 8em;
+  }
+
+  .footer {
+    height: 25vh;
+  }
+
+}
+
+
+
+/* <---------------------- MI MUSICA ----------------------> */
+
+
+.grillaMiMusica {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "header header header header header header header header"
+    "mainMiMusica mainMiMusica mainMiMusica mainMiMusica mainMiMusica mainMiMusica mainMiMusica mainMiMusica"
+    "mainMiMusica mainMiMusica mainMiMusica mainMiMusica mainMiMusica mainMiMusica mainMiMusica mainMiMusica"
+    "mainMiMusica mainMiMusica mainMiMusica mainMiMusica mainMiMusica mainMiMusica mainMiMusica mainMiMusica"
+    "mainMiMusica mainMiMusica mainMiMusica mainMiMusica mainMiMusica mainMiMusica mainMiMusica mainMiMusica"
+    "mainMiMusica mainMiMusica mainMiMusica mainMiMusica mainMiMusica mainMiMusica mainMiMusica mainMiMusica"
+    "mainMiMusica mainMiMusica mainMiMusica mainMiMusica mainMiMusica mainMiMusica mainMiMusica mainMiMusica"
+    "mainMiMusica mainMiMusica mainMiMusica mainMiMusica mainMiMusica mainMiMusica mainMiMusica mainMiMusica"
+    "mainMiMusica mainMiMusica mainMiMusica mainMiMusica mainMiMusica mainMiMusica mainMiMusica mainMiMusica"
+    "footer footer footer footer footer footer footer footer";
+}
+
+.header {
+  grid-area: header;
+}
+
+.footer {
+  grid-area: footer;
+}
+
+.mainMiMusica {
+  grid-area: mainMiMusica;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80vh;
+  background-color: #734E6D;
+}
+
+.youtube {
+  padding-left: 8em;
+}
+
+.youtube h2 {
+  padding-bottom: .5em;
+  color: #fff;
+  font-family: 'Outfit', sans-serif;
+  font-size: 2vw;
+  font-weight: 600;
+}
+
+.spotify {
+  padding-right: 8em;
+}
+
+.spotify h2 {
+  padding-bottom: .5em;
+  color: #fff;
+  font-family: 'Outfit', sans-serif;
+  font-size: 4vh;
+  font-weight: 600;
+}
+
+
+/*<-----------------------------GALERIA--------------------------->*/
+
+
+.Nav {
+  display: flex;
+  align-items: center;
+  padding-right: 1em;
+}
+
+.Nav ul {
+  display: flex;
+  list-style: none;
+}
+
+.Nav li {
+  padding: 1em;
+}
+
+.Nav a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.galeriaMain {
+  background-color: #734E6D;
+}
+
+
+.galeria img {
+  box-shadow: 0 8px 10px -4px rgba(0, 0, 0, .6);
+  border-radius: 1em;
+}
+
+
+.galeria .col {
+  margin-top: 1.5em;
+}
+
+
+/* <---------------------------- CONTACTO ------------------------------> */
+
+.contactoform {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  height: 80vh;
+  background-image: url(../Archivos/contactbg.jpg);
+  background-position: center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  padding-left: 5vw;
+}
+
+.formularioContacto {
+  display: flex;
+  flex-direction: column;
+  background-color: #734E6D;
+  width: 30vw;
+  height: 50vh;
+  border-radius: 1vw;
+  padding: 2vw;
+
+}
+
+.tituloContacto {
+  display: flex;
+  justify-content: flex-start;
+  font-family: 'Outfit', sans-serif;
+  font-size: 2.5vw;
+  font-weight: 400;
+  color: #F1BE9F;
+}
